@@ -26,6 +26,9 @@ cors_domains =
 
 [history]
 
+[file_manager]
+enable_object_processing = True
+
 [update_manager]
 channel = dev
 refresh_interval = 168
