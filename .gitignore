@@ -2,4 +2,5 @@
  adxl_results/belts/*.csv
  adxl_results/vibrations/*.tar.gz
  printer-*.cfg
+ *.bkp
  
