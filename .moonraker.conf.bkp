@@ -86,3 +86,11 @@ managed_services = klipper
 info_tags = 
 	desc=Beacon Surface Scanner
 
+[update_manager sonar]
+type = git_repo
+path = ~/sonar
+origin = https://github.com/mainsail-crew/sonar.git
+primary_branch = main
+managed_services = sonar
+system_dependencies = resources/system-dependencies.json
+
