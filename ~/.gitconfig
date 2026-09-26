@@ -1,0 +1,9 @@
+# --- WORK ACCOUNT (GLOBAL DEFAULT) ---
+[user]
+    name = Austin Welch
+    email = Austin.Welch@polaris.com
+
+# --- PERSONAL ACCOUNT CONDITIONAL ROUTING ---
+# Remember to use forward slashes (/) and keep the trailing slash!
+[includeIf "gitdir:G:/My Drive/3D Printer/Klipper Configs/Ender3_SW/"]
+    path = ~/.gitconfig-personal
