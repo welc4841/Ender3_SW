@@ -59,9 +59,11 @@ grab_version(){
     m3="Mainsail version: $mainsail_ver"
   fi
   if [ ! -z "$fluidd_folder" ]; then
-    fluidd_ver=$(head -n 1 $fluidd_folder/.version)
+    # Extracts the "version" value from the JSON file
+    fluidd_ver=$(jq -r '.version' "$fluidd_folder/release_info.json")
     m4="Fluidd version: $fluidd_ver"
   fi
+
 }
 
 # To fully automate this and not have to deal with auth issues, generate a legacy token on Github
