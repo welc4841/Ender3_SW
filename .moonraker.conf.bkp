@@ -60,26 +60,6 @@ path = ~/mainsail-config
 origin = https://github.com/mainsail-crew/mainsail-config.git
 managed_services = klipper
 
-[update_manager fluidd]
-type = web
-channel = stable
-repo = fluidd-core/fluidd
-path = ~/fluidd
-
-[update_manager fluidd-config]
-type = git_repo
-primary_branch = master
-path = ~/fluidd-config
-origin = https://github.com/fluidd-core/fluidd-config.git
-managed_services = klipper
-
-[update_manager pgcode]
-type = git_repo
-primary_branch = main
-origin = https://github.com/Kragrathea/pgcode.git
-path = ~/pgcode
-is_system_service = False
-
 [update_manager beacon]
 type = git_repo
 channel = dev
@@ -93,28 +73,13 @@ managed_services = klipper
 info_tags = 
 	desc=Beacon Surface Scanner
 
-[update_manager sonar]
-type = git_repo
-path = ~/sonar
-origin = https://github.com/mainsail-crew/sonar.git
-primary_branch = main
-managed_services = sonar
-system_dependencies = resources/system-dependencies.json
-
 [update_manager crowsnest]
 type = git_repo
 path = ~/crowsnest
 origin = https://github.com/mainsail-crew/crowsnest.git
+primary_branch = v5
 managed_services = crowsnest
-install_script = tools/pkglist.sh
-
-[update_manager moonraker-obico]
-type = git_repo
-path = /home/alwelch/moonraker-obico
-origin = https://github.com/TheSpaghettiDetective/moonraker-obico.git
-env = /home/alwelch/moonraker-obico/../moonraker-obico-env/bin/python
+system_dependencies = system-dependencies.json
+virtualenv = ~/crowsnest-env
 requirements = requirements.txt
-install_script = install.sh
-managed_services = 
-	moonraker-obico
 
